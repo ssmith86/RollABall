@@ -684,6 +684,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac4d6bde93b46a4ea3d63b88eaf2bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sphereRigidbody: {fileID: 1386707791}
+  ballSpeed: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
