@@ -1,10 +1,13 @@
+using System;
+using System.Net.Sockets;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
     public UnityEvent<Vector2> OnMove = new UnityEvent<Vector2>();
-   
+    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,15 +18,17 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         Vector2 inputVector = Vector2.zero;
-         if (Input.GetKey(KeyCode.W))
+     
+
+        if (Input.GetKey(KeyCode.W))
              {
              inputVector += Vector2.up;
             }
-         if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
             {
              inputVector += Vector2.down;
              }
-         if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
              {
              inputVector += Vector2.left;
              }
@@ -33,5 +38,7 @@ public class InputManager : MonoBehaviour
              }
 
         OnMove?.Invoke(inputVector);
+
+
     }
 }
